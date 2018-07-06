@@ -3,6 +3,7 @@ package com.ds.ycserver.netty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.ds.ycserver.util.NettyServerConfig;
@@ -31,7 +32,7 @@ public class YcNettyServer {
 	@Autowired
 	private NettyServerConfig config;
 	@Autowired
-	private DataServerHandler dataServerHandler;
+	private ApplicationContext ctx;
 
     public void starter() throws Exception {
     	int PORT = config.getServer().getPort();
@@ -52,7 +53,7 @@ public class YcNettyServer {
                      ByteBuf delimiter = Unpooled.copiedBuffer(",END".getBytes());
                      p.addLast(new DelimiterBasedFrameDecoder(300, delimiter));
                      p.addLast(new StringDecoder());
-                     p.addLast(dataServerHandler);
+                     p.addLast((DataServerHandler)ctx.getBean("dataServerHandler"));
                  }
              });
             ChannelFuture f = b.bind(PORT).sync();
@@ -63,5 +64,4 @@ public class YcNettyServer {
             workerGroup.shutdownGracefully();
         }
     }
-
 }

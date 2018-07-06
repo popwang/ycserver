@@ -17,3 +17,197 @@
 15:48:28.991 logback [nioEventLoopGroup-3-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
 15:48:31.985 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466 客户端断开连接！
 15:48:31.989 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466连接已移除！
+16:21:42.767 logback [main] INFO  com.ds.ycserver.YcserverApplication - Starting YcserverApplication v0.0.1-SNAPSHOT on BAB1601339 with PID 6912 (D:\baidudownload\ycserver\target\ycNettyServer.jar started by pactera in D:\baidudownload\ycserver\target)
+16:21:42.789 logback [main] INFO  com.ds.ycserver.YcserverApplication - The following profiles are active: prod
+16:21:42.906 logback [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3ab39c39: startup date [Fri Jul 06 16:21:42 CST 2018]; root of context hierarchy
+16:21:45.665 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:21:45.667 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+16:21:45.676 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16:21:45.698 logback [main] INFO  com.ds.ycserver.YcserverApplication - Started YcserverApplication in 3.842 seconds (JVM running for 4.848)
+16:21:46.326 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xd1e66a0c] REGISTERED
+16:21:46.331 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xd1e66a0c] BIND: 0.0.0.0/0.0.0.0:8888
+16:21:46.337 logback [main] INFO  com.ds.ycserver.netty.YcNettyServer - 服务已经启动，端口号 :8888
+16:21:46.345 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xd1e66a0c, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+16:23:05.826 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xd1e66a0c, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xc3bfe5e5, L:/192.168.0.166:8888 - R:/192.168.0.166:64797]
+16:23:05.828 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xd1e66a0c, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+16:23:05.856 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:64797 客户端连接成功!
+16:23:08.051 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:64797:SEND,DATAS,00000888,0,0,0,0.0,6,18.1,72.0,102.9,50,1008,0,8,0, 34.725957,113.641365,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,END
+16:23:08.088 logback [nioEventLoopGroup-3-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:23:10.358 logback [nioEventLoopGroup-3-1] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:338)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy46.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:58)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy47.saveWpData(Unknown Source)
+	at com.ds.ycserver.mysql.service.DataService.saveWpData(DataService.java:15)
+	at com.ds.ycserver.netty.DataServerHandler.channelRead(DataServerHandler.java:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1414)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:945)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:146)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 68 common frames omitted
+16:23:10.640 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:64797连接已关闭！
+16:23:10.645 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:64797 客户端断开连接！
+16:23:10.651 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:64797连接已移除！
+16:26:46.474 logback [Thread-2] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3ab39c39: startup date [Fri Jul 06 16:21:42 CST 2018]; root of context hierarchy
+16:26:46.484 logback [Thread-2] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:26:46.491 logback [Thread-2] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:53:44.518 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Starting YcserverApplication on BAB1601339 with PID 7064 (D:\baidudownload\ycserver\target\classes started by pactera in D:\baidudownload\ycserver)
+17:53:44.520 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - The following profiles are active: prod
+17:53:44.624 logback [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@66cdb1e3: startup date [Fri Jul 06 17:53:44 CST 2018]; root of context hierarchy
+17:53:47.556 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+17:53:47.600 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:53:47.602 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:53:47.609 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:53:47.636 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Started YcserverApplication in 3.83 seconds (JVM running for 4.827)
+17:53:47.981 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8719fc7e] REGISTERED
+17:53:47.982 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8719fc7e] BIND(0.0.0.0/0.0.0.0:8888)
+17:53:47.986 logback [restartedMain] INFO  com.ds.ycserver.netty.YcNettyServer - 鏈嶅姟宸茬粡鍚姩锛岀鍙ｅ彿 :8888
+17:53:47.988 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8719fc7e, /0:0:0:0:0:0:0:0:8888] ACTIVE
+17:53:57.015 logback [Thread-6] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@66cdb1e3: startup date [Fri Jul 06 17:53:44 CST 2018]; root of context hierarchy
+17:53:57.020 logback [Thread-6] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:53:57.022 logback [Thread-6] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:53:57.276 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Starting YcserverApplication on BAB1601339 with PID 7064 (D:\baidudownload\ycserver\target\classes started by pactera in D:\baidudownload\ycserver)
+17:53:57.276 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - The following profiles are active: prod
+17:53:57.286 logback [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3d98461a: startup date [Fri Jul 06 17:53:57 CST 2018]; root of context hierarchy
+17:53:57.908 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+17:53:57.927 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:53:57.927 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:53:57.930 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:53:57.938 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Started YcserverApplication in 0.751 seconds (JVM running for 16.057)
+17:53:58.013 logback [nioEventLoopGroup-4-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8ee58d1f] REGISTERED
+17:53:58.014 logback [nioEventLoopGroup-4-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8ee58d1f] BIND(0.0.0.0/0.0.0.0:8888)
+17:53:58.015 logback [nioEventLoopGroup-4-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8ee58d1f] CLOSE()
+17:53:58.016 logback [nioEventLoopGroup-4-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x8ee58d1f] UNREGISTERED
+17:53:58.028 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:53:58.034 logback [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.ds.ycserver.YcserverApplication.main(YcserverApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:125)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:485)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1089)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:430)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:415)
+	at io.netty.channel.ChannelDuplexHandler.bind(ChannelDuplexHandler.java:38)
+	at io.netty.handler.logging.LoggingHandler.bind(LoggingHandler.java:197)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:430)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:415)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:903)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:198)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:348)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:358)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:112)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:748)
+17:53:58.037 logback [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3d98461a: startup date [Fri Jul 06 17:53:57 CST 2018]; root of context hierarchy
+17:53:58.044 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:53:58.044 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:54:11.871 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Starting YcserverApplication on BAB1601339 with PID 3240 (D:\baidudownload\ycserver\target\classes started by pactera in D:\baidudownload\ycserver)
+17:54:11.874 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - The following profiles are active: prod
+17:54:11.962 logback [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2feea2c9: startup date [Fri Jul 06 17:54:11 CST 2018]; root of context hierarchy
+17:54:14.734 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+17:54:14.782 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:54:14.784 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+17:54:14.796 logback [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+17:54:14.829 logback [restartedMain] INFO  com.ds.ycserver.YcserverApplication - Started YcserverApplication in 3.618 seconds (JVM running for 4.526)
+17:54:15.171 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x0ce22394] REGISTERED
+17:54:15.172 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x0ce22394] BIND(0.0.0.0/0.0.0.0:8888)
+17:54:15.176 logback [restartedMain] INFO  com.ds.ycserver.netty.YcNettyServer - 鏈嶅姟宸茬粡鍚姩锛岀鍙ｅ彿 :8888
+17:54:15.178 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0x0ce22394, /0:0:0:0:0:0:0:0:8888] ACTIVE

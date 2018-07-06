@@ -22,22 +22,23 @@ public class ObjectUtil {
 		wp.setP014(Double.parseDouble(strs[16]));
 		wp.setP015(Double.parseDouble(strs[17]));
 		//新增扩展字段
-		wp.setP016(Double.parseDouble(strs[18]));
-		wp.setP017(Double.parseDouble(strs[19]));
-		wp.setP018(Double.parseDouble(strs[20]));
-		wp.setP019(Double.parseDouble(strs[21]));
-		wp.setP020(Double.parseDouble(strs[22]));
-		wp.setP021(Double.parseDouble(strs[23]));
-		wp.setP022(Double.parseDouble(strs[24]));
-		wp.setP023(Double.parseDouble(strs[25]));
-		wp.setP024(Double.parseDouble(strs[26]));
-		wp.setP025(Double.parseDouble(strs[27]));
-		wp.setP026(Double.parseDouble(strs[28]));
-		wp.setP027(Double.parseDouble(strs[29]));
-		wp.setP028(Double.parseDouble(strs[30]));
-		wp.setP029(Double.parseDouble(strs[31]));
-		wp.setP030(Double.parseDouble(strs[32]));
-		
+		if(strs.length==34){
+			wp.setP016(Double.parseDouble(strs[18]));
+			wp.setP017(Double.parseDouble(strs[19]));
+			wp.setP018(Double.parseDouble(strs[20]));
+			wp.setP019(Double.parseDouble(strs[21]));
+			wp.setP020(Double.parseDouble(strs[22]));
+			wp.setP021(Double.parseDouble(strs[23]));
+			wp.setP022(Double.parseDouble(strs[24]));
+			wp.setP023(Double.parseDouble(strs[25]));
+			wp.setP024(Double.parseDouble(strs[26]));
+			wp.setP025(Double.parseDouble(strs[27]));
+			wp.setP026(Double.parseDouble(strs[28]));
+			wp.setP027(Double.parseDouble(strs[29]));
+			wp.setP028(Double.parseDouble(strs[30]));
+			wp.setP029(Double.parseDouble(strs[31]));
+			wp.setP030(Double.parseDouble(strs[32]));
+		}
 		return wp;
 	}
 	

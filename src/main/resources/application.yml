@@ -17,4 +17,4 @@ mybatis:
 netty:
   server:
     port: 8888
-    poolSize: 20
+    poolSize: 100
