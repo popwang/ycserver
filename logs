@@ -1,0 +1,19 @@
+15:48:13.579 logback [main] INFO  com.ds.ycserver.YcserverApplication - Starting YcserverApplication v0.0.1-SNAPSHOT on BAB1601339 with PID 4360 (D:\baidudownload\ycserver\target\ycNettyServer.jar started by pactera in D:\baidudownload\ycserver\target)
+15:48:13.586 logback [main] INFO  com.ds.ycserver.YcserverApplication - The following profiles are active: dev
+15:48:13.707 logback [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3ab39c39: startup date [Fri Jul 06 15:48:13 CST 2018]; root of context hierarchy
+15:48:16.395 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+15:48:16.397 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+15:48:16.406 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+15:48:16.431 logback [main] INFO  com.ds.ycserver.YcserverApplication - Started YcserverApplication in 3.756 seconds (JVM running for 4.75)
+15:48:17.034 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xf5191835] REGISTERED
+15:48:17.052 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xf5191835] BIND: 0.0.0.0/0.0.0.0:8888
+15:48:17.059 logback [main] INFO  com.ds.ycserver.netty.YcNettyServer - 服务已经启动，端口号 :8888
+15:48:17.061 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xf5191835, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+15:48:27.326 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xf5191835, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xaf56e23f, L:/192.168.0.166:8888 - R:/192.168.0.166:63466]
+15:48:27.333 logback [nioEventLoopGroup-2-1] ERROR i.n.handler.logging.LoggingHandler - [id: 0xf5191835, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+15:48:27.369 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466 客户端连接成功!
+15:48:28.609 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466:SEND,DATAS,00000888,0,0,0,0.0,6,18.1,72.0,102.9,50,1008,0,8,0, 34.725957,113.641365,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,END
+15:48:28.640 logback [nioEventLoopGroup-3-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:48:28.991 logback [nioEventLoopGroup-3-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:48:31.985 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466 客户端断开连接！
+15:48:31.989 logback [nioEventLoopGroup-3-1] INFO  c.d.ycserver.netty.DataServerHandler - /192.168.0.166:63466连接已移除！
