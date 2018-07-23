@@ -16,7 +16,7 @@ public class OrderBufferService {
 		return order;
 	}
 	
-	public void updateOrderBufferFlag(String name){
-		this.orderBufferMapper.updateOrderBufferFlag(name);
+	public void updateOrderBufferFlag(Integer i_id){
+		this.orderBufferMapper.updateOrderBufferFlag(i_id);
 	}
 }

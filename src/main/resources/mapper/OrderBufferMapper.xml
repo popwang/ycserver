@@ -7,13 +7,13 @@
   		WHERE v_equipment_name= #{v_equipment_name} 
   		AND i_send_flag<![CDATA[  < ]]>3 
   		AND dtm_create<![CDATA[ > ]]>DATE_FORMAT(NOW(),'%Y-%m-%d') 
-  		ORDER BY dtm_create ASC 
+  		ORDER BY dtm_create DESC 
   		LIMIT 0,1
   </select>
   
-  <update id="updateOrderBufferFlag" parameterType="string">
+  <update id="updateOrderBufferFlag" parameterType="integer">
   		UPDATE t_order_buffer
   		SET I_SEND_FLAG=I_SEND_FLAG+1
-  		WHERE v_equipment_name= #{v_equipment_name} 
+  		WHERE i_id= #{i_id} 
   </update>
 </mapper>

@@ -19,5 +19,5 @@ public interface OrderBufferMapper {
 	 * 指令发送成功后执行指令计数器+1
 	 * @param name
 	 */
-	public void updateOrderBufferFlag(@Param("v_equipment_name") String name);
+	public void updateOrderBufferFlag(@Param("i_id") Integer i_id);
 }
