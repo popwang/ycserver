@@ -58,7 +58,7 @@ public class DataServerHandler extends ChannelInboundHandlerAdapter {
 				/**
 				 * 数据格式正确，解析入库
 				 */
-				if (strs.length >= 19) {
+				if (strs.length == 19 || strs.length==34) {
 					EquipmentData wp = ObjectUtil.stringToObject(strs);
 					//数据合格才做更新，否则不予更新
 					if(wp.getP002()>0 || wp.getP003()>0){
