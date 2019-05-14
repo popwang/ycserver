@@ -24,22 +24,7 @@ CREATE TABLE `t_equipment_data` (
   `p013` double(10,3) DEFAULT NULL COMMENT '保留5',
   `p014` double(10,6) DEFAULT NULL COMMENT '经度',
   `p015` double(10,6) DEFAULT NULL COMMENT '纬度',
-  `dtm_create` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '数据插入时间',
-  `p016` double(10,3) DEFAULT NULL,
-  `p017` double(10,3) DEFAULT NULL,
-  `p018` double(10,3) DEFAULT NULL,
-  `p019` double(10,3) DEFAULT NULL,
-  `p020` double(10,3) DEFAULT NULL,
-  `p021` double(10,3) DEFAULT NULL,
-  `p022` double(10,3) DEFAULT NULL,
-  `p023` double(10,3) DEFAULT NULL,
-  `p024` double(10,3) DEFAULT NULL,
-  `p025` double(10,3) DEFAULT NULL,
-  `p026` double(10,3) DEFAULT NULL,
-  `p027` double(10,3) DEFAULT NULL,
-  `p028` double(10,3) DEFAULT NULL,
-  `p029` double(10,3) DEFAULT NULL,
-  `p030` double(10,3) DEFAULT NULL
+  `dtm_create` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '数据插入时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Table structure for table `t_equipment_data2` */
@@ -63,33 +48,5 @@ CREATE TABLE `t_equipment_data2` (
   `p013` double(10,3) DEFAULT NULL COMMENT '保留5',
   `p014` double(10,6) DEFAULT NULL COMMENT '经度',
   `p015` double(10,6) DEFAULT NULL COMMENT '纬度',
-  `dtm_create` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '数据插入时间',
-  `p016` double(10,3) DEFAULT NULL,
-  `p017` double(10,3) DEFAULT NULL,
-  `p018` double(10,3) DEFAULT NULL,
-  `p019` double(10,3) DEFAULT NULL,
-  `p020` double(10,3) DEFAULT NULL,
-  `p021` double(10,3) DEFAULT NULL,
-  `p022` double(10,3) DEFAULT NULL,
-  `p023` double(10,3) DEFAULT NULL,
-  `p024` double(10,3) DEFAULT NULL,
-  `p025` double(10,3) DEFAULT NULL,
-  `p026` double(10,3) DEFAULT NULL,
-  `p027` double(10,3) DEFAULT NULL,
-  `p028` double(10,3) DEFAULT NULL,
-  `p029` double(10,3) DEFAULT NULL,
-  `p030` double(10,3) DEFAULT NULL
+  `dtm_create` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '数据插入时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='里面只存每个设备最新的一条数据';
-
-/*Table structure for table `t_order_buffer` */
-
-DROP TABLE IF EXISTS `t_order_buffer`;
-
-CREATE TABLE `t_order_buffer` (
-  `i_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `v_equipment_name` varchar(100) DEFAULT NULL COMMENT '设备名称',
-  `v_order_content` varchar(500) DEFAULT NULL COMMENT '发送内容',
-  `i_send_flag` int(11) DEFAULT NULL COMMENT '发送状态，0未发送，1已发送',
-  `dtm_create` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '数据添加时间',
-  PRIMARY KEY (`i_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5051 DEFAULT CHARSET=utf8;

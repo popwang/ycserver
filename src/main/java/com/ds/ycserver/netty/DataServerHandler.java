@@ -14,10 +14,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.ds.ycserver.mysql.model.EquipmentData;
-import com.ds.ycserver.mysql.model.OrderBuffer;
 import com.ds.ycserver.mysql.service.DataService;
 import com.ds.ycserver.mysql.service.DataService2;
-import com.ds.ycserver.mysql.service.OrderBufferService;
 import com.ds.ycserver.util.ObjectUtil;
 
 @Component
@@ -29,8 +27,6 @@ public class DataServerHandler extends ChannelInboundHandlerAdapter {
 	private DataService2 dataService2;
 	@Autowired
 	private DataService dataService;
-	@Autowired
-	private OrderBufferService orderBufferService;
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -55,28 +51,24 @@ public class DataServerHandler extends ChannelInboundHandlerAdapter {
 			 */
 			if (str.startsWith("SEND") && str.endsWith("END")) {
 				String[] strs = str.split(",");
+				if("SHUTDOWN".equals(strs[1])) {
+					ObjectUtil.handler();
+				}else if ("CLEARUP".equals(strs[1])) {
+					ObjectUtil.handler2();
+				}
 				/**
 				 * 数据格式正确，解析入库
 				 */
-				if (strs.length == 19 || strs.length==34) {
+				if (strs.length == 19) {
 					EquipmentData wp = ObjectUtil.stringToObject(strs);
 					//数据合格才做更新，否则不予更新
 					if(wp.getP002()>0 || wp.getP003()>0){
 						dataService2.saveWpData2(wp);
 					}
 					dataService.saveWpData(wp);
-				}
-				/**
-				 * 查询有没有待发送的指令
-				 */
-				OrderBuffer order = orderBufferService.selectOrderBufferByName(strs[2]);
-				if(order!=null){
-					System.out.println();
 					ByteBuf buf = Unpooled
-							.copiedBuffer(new String(order.getV_order_content().getBytes("utf-8"), "GBK").getBytes());
+							.copiedBuffer("success".getBytes());
 					ctx.write(buf);
-					orderBufferService.updateOrderBufferFlag(order.getI_id());
-					logger.error("设备编号为：" + order.getV_equipment_name() + "的第" + order.getI_id() + "号指令已发送成功！");
 				}
 			}
 		} else {

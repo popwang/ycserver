@@ -3,8 +3,9 @@ spring:
     active: dev
   datasource:
     driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/ds?useSSL=false&characterEncoding=utf8
     username: root
-    password: admin3#
+    password: admin0000
   jpa:
     database: mysql
     show-sql: false
